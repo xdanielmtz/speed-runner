@@ -8,6 +8,11 @@ prepareRead()
 function prepareRead() {
  var prepareInterval = setInterval(function () {
     console.log("working");
+    timeLeft --;
+    timeEl.textContent = timeLeft + " seconds until start."
+    if(timeLeft === 0){
+      clearInterval(prepareInterval);
+    }
  },1000)
 }
 
